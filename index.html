@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Cacao Pastry Bakery in Heraklion, Greece. Fresh pastries, handmade cakes, ice cream, specialty coffee, and savory snacks crafted with love."/>
+  <meta name="keywords" content="bakery, coffee shop, cakes, Heraklion, pastry, ice cream, Cacao Pastry Bakery"/>
+  <meta name="author" content="Cacao Pastry Bakery"/>
+  <title>Cacao Pastry Bakery | Heraklion, Greece</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B4513',
+            secondary: '#D2691E',
+            accent: '#F5DEB3',
+            cream: '#FFF8E1',
+            gold: '#D4AF37'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Poppins', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-body bg-cream">
+  <!-- Header -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+      <div class="flex items-center justify-between w-full md:w-auto">
+        <div class="flex items-center">
+          <div class="bg-primary w-12 h-12 rounded-full flex items-center justify-center">
+            <i class="fas fa-cookie text-white text-2xl"></i>
+          </div>
+          <h1 class="ml-3 text-2xl font-heading font-bold text-primary">Cacao Pastry Bakery</h1>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-primary text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      
+      <nav id="menu" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto mt-4 md:mt-0">
+        <ul class="flex flex-col md:flex-row space-y-3 md:space-y-0 md:space-x-8 text-center">
+          <li><a href="#home" class="text-primary hover:text-secondary font-medium">Home</a></li>
+          <li><a href="#about" class="text-primary hover:text-secondary font-medium">About</a></li>
+          <li><a href="#menu" class="text-primary hover:text-secondary font-medium">Menu</a></li>
+          <li><a href="#gallery" class="text-primary hover:text-secondary font-medium">Gallery</a></li>
+          <li><a href="#testimonials" class="text-primary hover:text-secondary font-medium">Testimonials</a></li>
+          <li><a href="#contact" class="text-primary hover:text-secondary font-medium">Contact</a></li>
+        </ul>
+        <button class="mt-4 md:mt-0 bg-primary hover:bg-secondary text-white font-medium py-2 px-6 rounded-full transition duration-300">
+          <i class="fas fa-phone mr-2"></i>Call Now
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="relative bg-gradient-to-r from-cream to-accent py-20">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+        <h1 class="text-4xl md:text-6xl font-heading font-bold text-primary mb-4">Fresh Baked Goods Made with Love</h1>
+        <p class="text-lg text-secondary mb-8">Experience the taste of tradition with our handcrafted pastries, cakes, and specialty coffee in the heart of Heraklion.</p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+          <button class="bg-primary hover:bg-secondary text-white font-medium py-3 px-8 rounded-full text-lg transition duration-300 transform hover:scale-105">
+            View Our Menu
+          </button>
+          <button class="bg-transparent border-2 border-primary hover:bg-primary text-primary hover:text-white font-medium py-3 px-8 rounded-full text-lg transition duration-300">
+            <i class="fas fa-map-marker-alt mr-2"></i>Find Us
+          </button>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative">
+          <div class="w-64 h-64 md:w-80 md:h-80 bg-secondary rounded-full absolute -top-6 -left-6 z-0"></div>
+          <img src="https://images.unsplash.com/photo-1551024506-010403b7b6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Fresh Pastries" class="relative z-10 rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-8 border-white shadow-xl">
+          <div class="w-32 h-32 bg-primary rounded-full absolute -bottom-6 -right-6 z-0"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Story</h2>
+        <div class="w-20 h-1 bg-secondary mx-auto"></div>
+      </div>
+      
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+          <img src="https://images.unsplash.com/photo-1559329804-96a0f88a8138?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Bakery Interior" class="rounded-xl shadow-lg">
+        </div>
+        
+        <div class="md:w-1/2 md:pl-10">
+          <h3 class="text-2xl font-heading font-semibold text-primary mb-4">Welcome to Cacao Pastry Bakery</h3>
+          <p class="text-gray-700 mb-6">Since 2005, Cacao Pastry Bakery has been the heart of Heraklion, bringing joy through our handcrafted pastries, cakes, and specialty coffee. Our master bakers use traditional techniques and the finest ingredients to create unforgettable treats.</p>
+          
+          <div class="grid grid-cols-2 gap-6 mb-8">
+            <div class="flex items-start">
+              <i class="fas fa-seedling text-secondary text-2xl mr-3 mt-1"></i>
+              <div>
+                <h4 class="font-semibold text-primary">Natural Ingredients</h4>
+                <p class="text-sm text-gray-600">Sourced locally when possible</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-heart text-secondary text-2xl mr-3 mt-1"></i>
+              <div>
+                <h4 class="font-semibold text-primary">Made with Love</h4>
+                <p class="text-sm text-gray-600">Every item crafted with care</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-award text-secondary text-2xl mr-3 mt-1"></i>
+              <div>
+                <h4 class="font-semibold text-primary">Award Winning</h4>
+                <p class="text-sm text-gray-600">Recognized excellence</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <i class="fas fa-recycle text-secondary text-2xl mr-3 mt-1"></i>
+              <div>
+                <h4 class="font-semibold text-primary">Sustainable</h4>
+                <p class="text-sm text-gray-600">Eco-friendly practices</p>
+              </div>
+            </div>
+          </div>
+          
+          <button class="bg-primary hover:bg-secondary text-white font-medium py-3 px-8 rounded-full transition duration-300">
+            Learn More About Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-20 bg-cream">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">Our Menu</h2>
+        <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+        <p class="text-gray-700 max-w-2xl mx-auto">Discover our fresh daily offerings, from flaky croissants to decadent cakes, all made in-house with passion.</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Menu Item 1 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1551024506-010403b7b6d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Croissants" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold text-primary mb-2">Fresh Croissants</h3>
+            <p class="text-gray-600 mb-4">Buttery, flaky perfection baked fresh every morning</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary font-bold">€2.50</span>
+              <button class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Menu Item 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1551024506-010403b7b6d6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Cakes" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold text-primary mb-2">Handmade Cakes</h3>
+            <p class="text-gray-600 mb-4">Custom cakes for any occasion</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary font-bold">€18.00 - €45.00</span>
+              <button class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Menu Item 3 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1551024506-010403b7b6d7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Coffee" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold text-primary mb-2">Specialty Coffee</h3>
+            <p class="text-gray-600 mb-4">Ethically sourced beans roasted to perfection</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary font-bold">€2.00 - €4.50</span>
+              <button class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Menu Item 4 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1551024506-010403b7b6d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Ice Cream" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold text-primary mb-2">Artisan Ice Cream</h3>
+            <p class="text-gray-600 mb-4">Homemade flavors with natural ingredients</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary font-bold">€3.50</span>
+              <button class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                Try Today
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Menu Item 5 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1551024506-010403b7b6d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Savory Snacks" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold text-primary mb-2">Savory Snacks</h3>
+            <p class="text-gray-600 mb-4">Fresh sandwiches and quiches</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary font-bold">€4.00 - €8.00</span>
+              <button class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                Order Now
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Menu Item 6 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 hover:shadow-xl">
+          <img src="https://images.unsplash.com/photo-1551024506-010403b7b6d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Seasonal Specials" class="w-full h-56 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-heading font-semibold text-primary mb-2">Seasonal Specials</h3>
+            <p class="text-gray-600 mb-4">Limited time offerings based on seasonal ingredients</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary font-bold">€3.00 - €12.00</span>
+              <button class="bg-primary hover:bg-secondary text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                Discover More
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-primary mb-4">What Our Customers Say</h2>
+        <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+        <p class="text-gray-700 max-w-2xl mx-auto">Don't just take our word for it - hear from our satisfied customers</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-cream p-8 rounded-xl shadow-md">
+          <div class="text-gold text-2xl mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic mb-6">"The best croissants I've ever had! Fresh, buttery, and perfectly flaky. I come here every morning for my coffee and pastry."</p>
+          <div class="flex items-center">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+            <div class="ml-4">
+              <h4 class="font-bold text-primary">Maria K.</h4>
+              <p class="text-gray-600">Regular Customer</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="bg-cream p-8 rounded-xl shadow-md">
+          <div class="text-gold text-2xl mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic mb-6">"I ordered a custom cake for my wedding anniversary and it was absolutely beautiful! The taste was incredible too. Thank you, Cacao!"</p>
+          <div class="flex items-center">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+            <div class="ml-4">
+              <h4 class="font-bold text-primary">George T.</h4>
+              <p class="text-gray-600">Happy Customer</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="bg-cream p-8 rounded-xl shadow-md">
+          <div class="text-gold text-2xl mb-4">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 italic mb-6">"The coffee here is exceptional. I've tried many cafes in Heraklion, but Cacao's blend is my favorite. The staff is always friendly too!"</p>
+          <div class="flex items-center">
+            <div class="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
+            <div class="ml-4">
+              <h4 class="font-bold text-primary">Dimitris P.</h4>
+              <p class="text-gray-600">Coffee Enthusiast</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-primary text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-4">Visit Us Today</h2>
+        <div class="w-20 h-1 bg-secondary mx-auto mb-6"></div>
+        <p class="max-w-2xl mx-auto">Come experience the warmth and deliciousness of Cacao Pastry Bakery</p>
+      </div>
+      
+      <div class="flex flex-col md:flex-row">
+        <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+          <div class="mb-8">
+            <h3 class="text-2xl font-heading font-semibold mb-4">Our Location</h3>
+            <p class="mb-4"><i class="fas fa-map-marker-alt mr-3 text-secondary"></i> 45 Ermou Street, Heraklion, Greece</p>
+            <p class="mb-4"><i class="fas fa-phone mr-3 text-secondary"></i> +30 2810 123456</p>
+            <p class="mb-4"><i class="fas fa-envelope mr-3 text-secondary"></i> info@cacaobakery.gr</p>
+          </div>
+          
+          <div class="mb-8">
+            <h3 class="text-2xl font-heading font-semibold mb-4">Opening Hours</h3>
+            <p class="mb-2">Monday - Friday: 7:00 AM - 8:00 PM</p>
+            <p class="mb-2">Saturday: 7:00 AM - 9:00 PM</p>
+            <p>Sunday: 8:00 AM - 6:00 PM</p>
+          </div>
+          
+          <div>
+            <h3 class="text-2xl font-heading font-semibold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="bg-secondary hover:bg-accent w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="bg-secondary hover:bg-accent w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="bg-secondary hover:bg-accent w-12 h-12 rounded-full flex items-center justify-center transition duration-300">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="md:w-1/2 md:pl-10">
+          <div class="bg-white text-primary p-8 rounded-xl shadow-lg">
+            <h3 class="text-2xl font-heading font-semibold mb-6">Send Us a Message</h3>
+            <form>
+              <div class="mb-4">
+                <input type="text" placeholder="Your Name" class="w-full bg-cream text-primary p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+              </div>
+              <div class="mb-4">
+                <input type="email" placeholder="Your Email" class="w-full bg-cream text-primary p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+              </div>
+              <div class="mb-4">
+                <input type="text" placeholder="Subject" class="w-full bg-cream text-primary p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary">
+              </div>
+              <div class="mb-6">
+                <textarea placeholder="Your Message" rows="4" class="w-full bg-cream text-primary p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+              </div>
+              <button type="submit" class="w-full bg-primary hover:bg-secondary text-white font-medium py-3 rounded-lg transition duration-300">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-6 md:mb-0">
+          <div class="flex items-center">
+            <div class="bg-primary w-10 h-10 rounded-full flex items-center justify-center">
+              <i class="fas fa-cookie text-white text-xl"></i>
+            </div>
+            <h2 class="ml-3 text-2xl font-heading font-bold">Cacao Pastry Bakery</h2>
+          </div>
+          <p class="mt-4 text-accent">Bringing joy through delicious baked goods since 2005</p>
+        </div>
+        
+        <div class="flex flex-col items-center md:items-end">
+          <p class="text-accent mb-2">© 2023 Cacao Pastry Bakery. All rights reserved.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-accent hover:text-white transition duration-300">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="text-accent hover:text-white transition duration-300">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="text-accent hover:text-white transition duration-300">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      const menu = document.getElementById('menu');
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+      menu.classList.toggle('absolute');
+      menu.classList.toggle('top-full');
+      menu.classList.toggle('left-0');
+      menu.classList.toggle('w-full');
+      menu.classList.toggle('bg-white');
+      menu.classList.toggle('py-4');
+      menu.classList.toggle('shadow-lg');
+    });
+
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
